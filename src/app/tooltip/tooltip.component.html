@@ -1,0 +1,7 @@
+<div class="tooltip-container" (click)="toggleTooltip()" role="tooltip">
+  <ng-content></ng-content>
+  <div class="tooltip-content" *ngIf="isVisible" aria-hidden="!isVisible">
+    {{ tooltipText }}
+    <button *ngIf="isClickMode" (click)="toggleTooltip()" aria-label="Close tooltip" class="close-btn">×</button>
+  </div>
+</div>
